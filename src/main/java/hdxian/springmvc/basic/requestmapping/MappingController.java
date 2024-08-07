@@ -1,7 +1,6 @@
-package hdxian.springmvc.requestmapping;
+package hdxian.springmvc.basic.requestmapping;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
