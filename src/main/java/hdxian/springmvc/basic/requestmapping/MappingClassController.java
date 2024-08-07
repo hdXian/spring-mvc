@@ -15,16 +15,19 @@ public class MappingClassController {
      * remove user: DELETE /users/{userId}
      */
 
+    // @GetMapping("/mapping/users")
     @GetMapping
     public String users() {
         return "get /users";
     }
 
+    // @PostMapping("/mapping/users")
     @PostMapping
     public String addUser() {
         return "post /users";
     }
 
+    // @GetMapping("/mapping/users/{userId}")
     @GetMapping("/{userId}")
     public String getUser(@PathVariable("userId") String userId) {
         return "get userId=" + userId;
