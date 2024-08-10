@@ -90,7 +90,10 @@ public class RequestParamController {
         return "request param map";
     }
 
-    // bind request parameters to HelloData object propertys
+    // bind request parameters to properties of HelloData
+    // spring parses simple type of arguments as @RequestParam (ex. String, int, Integer)
+    // the other types (ex. HelloData) are parsed as @ModelAttribute
+    // @ModelAttribute can be omitted.
     @ResponseBody
     @RequestMapping("/model-attribute-v1")
     public String modelAttributeV1(@ModelAttribute HelloData helloData) {
