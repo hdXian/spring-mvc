@@ -1,9 +1,11 @@
 package hdxian.springmvc.basic.request;
 
+import hdxian.springmvc.basic.HelloData;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -86,6 +88,14 @@ public class RequestParamController {
     public String requestParamMap(@RequestParam Map<String, Object> paramMap) {
         log.info("log username={}, age={}", paramMap.get("username"), paramMap.get("age"));
         return "request param map";
+    }
+
+    // bind request parameters to HelloData object propertys
+    @ResponseBody
+    @RequestMapping("/model-attribute-v1")
+    public String modelAttributeV1(@ModelAttribute HelloData helloData) {
+        log.info("log username={}, age={}", helloData.getUsername(), helloData.getAge());
+        return "model attribute v1";
     }
 
 
