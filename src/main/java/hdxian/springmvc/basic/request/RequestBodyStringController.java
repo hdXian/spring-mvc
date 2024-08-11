@@ -44,7 +44,7 @@ public class RequestBodyStringController {
 
     /**
      * HttpEntity - get http request message body
-     * or put data into http response message body
+     * able to use at request, response both.
      */
     @PostMapping("/request-body-string-v3")
     public HttpEntity<String> requestBodyStringV3(HttpEntity<String> httpEntity) throws IOException {
