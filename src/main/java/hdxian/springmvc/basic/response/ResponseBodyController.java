@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
-@Controller
-@ResponseBody
+//@Controller
+//@ResponseBody
+@RestController
 public class ResponseBodyController {
 
     /**
