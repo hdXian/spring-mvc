@@ -30,7 +30,7 @@ public class ResponseBodyController {
     }
 
     // return String
-    @ResponseBody
+//    @ResponseBody
     @GetMapping("/response-body-string-v3")
     public String responseBodyV3() {
         return "response body string v3";
@@ -48,8 +48,8 @@ public class ResponseBodyController {
     }
 
     // return HelloData object
+//    @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
     @GetMapping("/response-body-json-v2")
     public HelloData responseBodyJsonV2() {
         HelloData helloData = new HelloData();
